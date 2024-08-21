@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+background: rgb(39, 38, 38);
+display: flex;
+text-align: center;
+justify-content: center;
+}
+.major{
+    width: 92%;
+    height: 93%;
+    border: 1px solid #fff;
+    margin: auto;
+}
+.left-whole-div{
+    width: 20%;
+    height: 100%;
+    border: 1px solid #fff;
+}
+.left-whole-div img{
+    width: 100%;
+    height: auto;
+   
+}
