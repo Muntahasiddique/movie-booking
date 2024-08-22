@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     width: 100vw;
@@ -25,4 +26,43 @@ justify-content: center;
     width: 100%;
     height: auto;
    
+}
+.left-whole-div i {
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    bottom: 15px;
+    background-color: rgb(206, 41, 41);
+    
+    /* Added smooth shadow for a glowing effect */
+                
+    /* Smooth transition for hover effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect to make the glow more intense */
+.left-whole-div i:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2), 
+                0 0 30px 10px rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+    transform: rotate(356deg);
+}
+.lower-div h7{
+color: #fff;
+font-size: 24px;
+}
+.lower-div-small{
+color: #fff;
+}
+.lower-div{
+    padding: 16px;
+    padding-top: 1px;
+    text-align: left;
+}
+.direction-detail{
+    display: flex;
+    flex-direction: column;
+    padding-top: 11px;
 }
