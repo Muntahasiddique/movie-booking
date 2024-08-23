@@ -14,17 +14,22 @@ justify-content: center;
 .major{
     width: 92%;
     height: 93%;
-    border: 1px solid #fff;
+  
     margin: auto;
+    display: flex;
 }
+/* left div */
 .left-whole-div{
     width: 20%;
     height: 100%;
-    border: 1px solid #fff;
+  
 }
+
+
+
 .left-whole-div img{
     width: 100%;
-    height: auto;
+    
    
 }
 .left-whole-div i {
@@ -65,4 +70,47 @@ color: #fff;
     display: flex;
     flex-direction: column;
     padding-top: 11px;
+}
+/* right div */
+.right-whole-div{
+    width: 80%;
+    height: 100%;
+   
+}
+.right-whole-div{
+    width: 80%;
+}
+.right-whole-div {
+    position: relative; /* Required to position the pseudo-element */
+}
+
+.right-whole-div img {
+    width: 100%; /* Ensures the image spans the full width of the container */
+    height: 250px; /* Sets a fixed height */
+    border-radius: 29px; /* Applies rounded corners */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    object-position: top; /* Aligns the image to focus on the top portion */
+    position: relative;
+    z-index: 1; /* Ensure the image stays below the gradient overlay */
+    padding-top: 9px;
+}
+
+
+.right-whole-div-img::before {
+    content: '';
+    position: absolute;
+    top: 0;  /* Align with the top of the image */
+    left: 53px; /* Align with the left of the image */
+    width: calc(100% - 53px); /* Match the width of the image, accounting for the padding */
+    height: 250px; /* Match the height of the image */
+    border-radius: 29px; /* Match the border radius of the image */
+    background: linear-gradient(rgba(39, 38, 38, 0.84), rgba(68, 68, 86, 0));
+    z-index: 2; /* Ensure the gradient is above the image */
+    pointer-events: none; /* Allows interaction with the image underneath */
+}
+
+.right-whole-div-img {
+    position: relative; /* Required to ensure the pseudo-element is positioned relative to this div */
+    padding-left: 53px;
+   
 }
