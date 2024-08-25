@@ -3,21 +3,54 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+/* ------------effect on page */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body {
     width: 100vw;
     height: 100vh;
-background: rgb(39, 38, 38);
-display: flex;
-text-align: center;
-justify-content: center;
+    background: rgb(39, 38, 38);
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
-.major{
+
+.major {
     width: 92%;
     height: 93%;
-
     margin: auto;
     display: flex;
+    animation: zoomIn 1.5s ease-out; /* Change to 'reveal' if preferred */
 }
+
+
 /* left div */
 .left-whole-div{
     width: 20%;
@@ -154,7 +187,7 @@ font-weight: bold;
         position: relative;
         z-index: 2;
         width: 100%;
-        top: -218px; /* Adjust or remove to see if it resolves the issue */
+        top: -244px; /* Adjust or remove to see if it resolves the issue */
         text-align: left;
     }
     
@@ -251,4 +284,69 @@ background-color: red;
     .date-day-name.active {
         background-color: red; /* Background color when active */
     }
-  
+    .screen{
+        width: 100%;
+        height: 68px;
+        position: relative;
+    top: -207px;
+    z-index: 2;
+    border-top: 3px solid rgb(240, 49, 49);
+    border-radius: 20%;
+    }
+    .screen::after {
+        content: '';
+        position: absolute; /* Ensure it is positioned relative to .screen */
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: transparent; /* No background color for the shadow effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1.3); /* Adjust shadow as needed */
+        border-radius: 20%; /* Match the border radius of the .screen */
+    }
+   .screen-h5{
+color: #fff;
+margin-top: 10px;
+font-family: "Roboto Mono", monospace;
+   }
+.chair{
+    width: 100%;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    position: relative;
+    top: -230px;
+    z-index: 2;
+}
+.seats {
+    background-color: rgb(182, 180, 180);
+    width: 20px;
+    height: 15px;
+    list-style: none;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: bolder;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* Shadow only at the bottom */
+    position: relative; /* Needed for the ::after element positioning */
+}
+
+.seats:hover {
+    background-color: palegreen;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.seats::after {
+    content: ''; /* Ensures the ::after element is generated */
+    position: absolute;
+    bottom: -13px; /* Positions the shadow below the original element */
+    left: 0;
+    right: 0;
+    background-color:  rgba(70, 69, 69, 0.3);
+    width: 100%; /* Matches the width of the parent */
+    height: 5px; /* Adjust height to your preference */
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+
