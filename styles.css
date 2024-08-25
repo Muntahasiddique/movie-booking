@@ -24,9 +24,6 @@ justify-content: center;
     height: 100%;
   
 }
-
-
-
 .left-whole-div img{
     width: 100%;
     
@@ -151,4 +148,107 @@ font-weight: bold;
     display: flex;
     justify-content: space-between;
     }
+    .sqare-div {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        top: -218px; /* Adjust or remove to see if it resolves the issue */
+        text-align: left;
+    }
+    
+    .line-div {
+        width: 100%;
+        height: 0.5px;
+        background-color: rgb(101, 107, 112);
+    }
+    
+    .sqare-div-left {
+        width: 46%;
+        height: auto;
+        position: relative;
+        z-index: 3;
+        color: #fff;
+     
 
+    }
+    
+   .proper-date-h6 {
+     padding: 4px 0px;
+     font-weight: bold;
+    }
+    .date-div{
+        display: flex;
+    }
+    .date-day-name{
+        padding: 0px 14px;
+        display: inline-block;
+        width: 100px; /* Adjust width according to the design */
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .date-container {
+        width: 100%;
+        overflow-x: auto;
+            position: relative; /* Needed to position the scroll indicator line */
+            padding-bottom: 10px; /* Add some space for the custom scrollbar */
+        scroll-behavior: smooth;
+    }
+    
+    .date-day-name h6 {
+        margin: 5px 0;
+    }
+  
+    .date-day-name {
+        padding: 0px 14px;
+        display: inline-block;
+        width: 100px; /* Adjust width according to the design */
+        text-align: center;
+        box-sizing: border-box;
+    }
+   
+    
+    .scroll-indicator {
+        position: absolute;
+        bottom: 0; /* Position at the bottom of the container */
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(101, 107, 112);
+        overflow: hidden;
+    }
+    
+    .scroll-indicator::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 30px; /* Width of the indicator */
+        background-color: rgb(101, 107, 112);
+        border-radius: 2px; /* Rounded ends */
+        transition: transform 0.2s; /* Smooth movement */
+    }
+  
+    .date-container:active .scroll-indicator::before {
+        transition: none; /* Disable transition when interacting with the scrollbar */
+    }
+    
+  
+    .date-container::-webkit-scrollbar {
+        height: 1px;
+    }
+    
+    .date-container::-webkit-scrollbar-thumb {
+        background: rgb(101, 107, 112);
+        border-radius: 2px;
+    }
+    
+    .date-day-name :hover{
+background-color: red;
+    }
+    .date-day-name.active {
+        background-color: red; /* Background color when active */
+    }
+  
