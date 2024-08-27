@@ -110,12 +110,6 @@ color: #c9c7c7;
     width: 80%;
     height: 100%;
    color:  rgb(240, 49, 49);
-   
-}
-.right-whole-div{
-    width: 80%;
-}
-.right-whole-div {
     position: relative; /* Required to position the pseudo-element */
 }
 
@@ -300,6 +294,7 @@ background-color: red;
    
     border-top: 3px solid rgb(240, 49, 49);
     border-radius: 20%;
+    display: none;
     }
     .screen::after {
         content: '';
@@ -322,6 +317,7 @@ font-family: "Roboto Mono", monospace;
     padding: 1px;
     top: -202px;
     position: relative;
+    display: none;
    }
 .chair{
     width: 100%;
@@ -381,12 +377,14 @@ font-family: "Roboto Mono", monospace;
     justify-content: center; /* Horizontal centering */
     margin-top: -201px;
     padding: 0px 39px 0px 0px;
+    display: none;
    
 }
 .availabe-list{
     padding: 0px 9px;
     color:  rgb(102, 100, 100);
     position: relative;
+
 }
 .seats1,.seats2,.seats3{
 background-color:  rgb(75 72 72);
@@ -435,3 +433,15 @@ position: absolute;
  display: none;
 }
 
+
+.reverse-btn{
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid red;
+    position: absolute;
+    right: 39px;
+    display: none;
+}
