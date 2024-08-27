@@ -55,6 +55,7 @@ body {
 .left-whole-div{
     width: 20%;
     height: 100%;
+    background: rgba(75 72 72);
   
 }
 .left-whole-div img{
@@ -89,13 +90,13 @@ color: #fff;
 font-size: 24px;
 }
 .lower-div-small{
-color: #fff;
+color: #c9c7c7;
 }
 .lower-div{
     padding: 16px;
     padding-top: 38px;
     text-align: left;
-    height: 50%;
+    height: 47%;
     background: rgb(75 72 72);
     margin-top: -37px;
 }
@@ -108,6 +109,7 @@ color: #fff;
 .right-whole-div{
     width: 80%;
     height: 100%;
+   color:  rgb(240, 49, 49);
    
 }
 .right-whole-div{
@@ -124,7 +126,7 @@ color: #fff;
     object-fit: cover; /* Ensures the image covers the entire area without stretching */
     object-position: top; /* Aligns the image to focus on the top portion */
     position: relative;
-    z-index: 1; /* Ensure the image stays below the gradient overlay */
+    z-index: -9; /* Ensure the image stays below the gradient overlay */
     padding-top: 9px;
 }
 
@@ -133,23 +135,21 @@ color: #fff;
     content: '';
     position: absolute;
     top: 0;  /* Align with the top of the image */
-    left: 53px; /* Align with the left of the image */
-    width: calc(100% - 53px); /* Match the width of the image, accounting for the padding */
+    left: 33px; /* Align with the left of the image */
+    width: calc(100% - 32px); /* Match the width of the image, accounting for the padding */
     height: 250px; /* Match the height of the image */
     border-radius: 29px; /* Match the border radius of the image */
     background: linear-gradient(180deg,rgba(39, 38, 38, 0.6), rgba(39, 38, 38, 0.9));
-    z-index: 2; /* Ensure the gradient is above the image */
+    z-index: -7; /* Ensure the gradient is above the image */
     pointer-events: none; /* Allows interaction with the image underneath */
 }
 
 .right-whole-div-img {
-    position: relative; /* Required to ensure the pseudo-element is positioned relative to this div */
-    padding-left: 53px;
-   
+   /* position: relative;  Required to ensure the pseudo-element is positioned relative to this div */
+    padding: 0px 34px 0px 34px;
+    width: 100%;
+    height: 100%;
 }
-
-
-
 .jawan-heading{
 color: #fff;
 font-weight: bold;
@@ -292,10 +292,12 @@ background-color: red;
     }
     .screen{
         width: 100%;
-        height: 68px;
+        height: 37px;
         position: relative;
     top: -207px;
     z-index: 2;
+ 
+   
     border-top: 3px solid rgb(240, 49, 49);
     border-radius: 20%;
     }
@@ -315,18 +317,24 @@ color: #fff;
 margin-top: 10px;
 font-family: "Roboto Mono", monospace;
    }
+   /* seats----------------------------- */
+   .chair-setup{
+    padding: 1px;
+    top: -202px;
+    position: relative;
+   }
 .chair{
     width: 100%;
     display: flex;
     color: #fff;
     justify-content: space-between;
     position: relative;
-    top: -176px;
+    top: 0px;
     z-index: 2;
     margin-bottom: 9px;
 }
 .seats {
-    background-color:  rgb(75 72 72);
+    background-color:  rgba(75 ,72, 72, 0.3);
     width: 22px;
     height: 16px;
     list-style: none;
@@ -335,6 +343,7 @@ font-family: "Roboto Mono", monospace;
     font-weight: bolder;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* Shadow only at the bottom */
     position: relative; /* Needed for the ::after element positioning */
+    color: #c9c7c7;
 }
 
 .seats:hover {
@@ -343,7 +352,6 @@ font-family: "Roboto Mono", monospace;
     transition: 0.2s linear;
     color: black;
 }
-
 .seats::after {
     content: ''; /* Ensures the ::after element is generated */
     position: absolute;
@@ -365,6 +373,65 @@ font-family: "Roboto Mono", monospace;
 .H6-J{
     FONT-WEIGHT: BOLDER;
 }
+.selected-booked {
+    color: #fff;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center; /* Horizontal centering */
+    margin-top: -201px;
+    padding: 0px 39px 0px 0px;
+   
+}
+.availabe-list{
+    padding: 0px 9px;
+    color:  rgb(102, 100, 100);
+    position: relative;
+}
+.seats1,.seats2,.seats3{
+background-color:  rgb(75 72 72);
+width: 22px;
+height: 16px;
+list-style: none;
+border-radius: 5px;
+font-size: 11px;
+font-weight: bolder;
+box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* Shadow only at the bottom */
+position: relative; /* Needed for the ::after element positioning */
+}
+.seats2{
+    background-color:  rgb(240, 49, 49);
+}
+.seats3{
+    background-color: rgb(88, 253, 88);
+}
+.seats1::after,.seats2::after,.seats3::after {
+    content: ''; /* Ensures the ::after element is generated */
+    position: absolute;
+    bottom: -8px; /* Positions the shadow below the original element */
+    left: 0;
+    right: 0;
+    background-color:  rgba(70, 69, 69, 0.3);
+    width: 100%; /* Matches the width of the parent */
+    height: 5px; /* Adjust height to your preference */
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.seats2::after{
+    background-color:  rgb(240, 49, 49);
+}
+.seats3::after{
+    background-color:  rgb(88, 253, 88);
+}
+.right-vedio{
+position: absolute;
 
-
+ width: 100%;
+ height: 100%;
+ left: 0;
+ top: 0;
+ z-index: -8px;
+ object-fit: initial;
+ display: none;
+}
 
