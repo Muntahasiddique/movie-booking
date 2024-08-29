@@ -52,3 +52,32 @@ seats.forEach((seat) => {
 });
 
 // ---------------------------------------------------------------------
+// main code....................
+// url in string
+let url  = window.location.href;
+// console.log(url);
+let urlsegment =url.split('?');
+// console.log(urlsegment[1]);
+
+//...............play btn..................
+let playbtn=document.getElementById('play');
+let vedio=document.getElementById('right-vedio-id');
+playbtn.addEventListener('click',()=>{
+    if(vedio.paused){
+        vedio.play();
+        vedio.style.display='unset';
+        playbtn.classList.remove('fa-play');
+        playbtn.classList.add('fa-pause');
+    }
+    else{
+        vedio.pause();
+        vedio.style.display='none';
+        playbtn.classList.add('fa-play');
+        playbtn.classList.remove('fa-pause');
+
+
+    }
+})
+vedio.addEventListener('ended',()=>{
+    vedio.play();
+})

@@ -294,7 +294,7 @@ background-color: red;
    
     border-top: 3px solid rgb(240, 49, 49);
     border-radius: 20%;
-    display: none;
+    /* display: none; */
     }
     .screen::after {
         content: '';
@@ -317,7 +317,7 @@ font-family: "Roboto Mono", monospace;
     padding: 1px;
     top: -202px;
     position: relative;
-    display: none;
+    /* display: none; */
    }
 .chair{
     width: 100%;
@@ -377,7 +377,7 @@ font-family: "Roboto Mono", monospace;
     justify-content: center; /* Horizontal centering */
     margin-top: -201px;
     padding: 0px 39px 0px 0px;
-    display: none;
+    /* display: none; */
    
 }
 .availabe-list{
@@ -443,7 +443,7 @@ position: absolute;
     border: 1px solid red;
     position: absolute;
     right: 39px;
-    display: none;
+    /* display: none; */
 }
 /* <!-- tickts --> */
 .tickts{
@@ -451,6 +451,7 @@ position: absolute;
  
     height: 75%;
     margin-top: -235px;
+    display: none;
 }
 .barcode{
     width: 100%;
