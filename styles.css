@@ -445,6 +445,17 @@ position: absolute;
     right: 39px;
     /* display: none; */
 }
+.reverse-btn-left{
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid red;
+    position: absolute;
+    right: 39px;
+    display: none;
+}
 /* <!-- tickts --> */
 .tickts{
     width: 100%;
